@@ -1,0 +1,10 @@
+.curintia{
+color: rgb(0, 100, 250);
+border-style: dashed;
+border-color: black;
+padding: 2px;
+display: inline-block;
+}
+h2 {
+color: rgb(255, 0, 0);
+}

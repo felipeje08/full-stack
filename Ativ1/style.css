@@ -1,0 +1,98 @@
+body {
+background-color: lightgray;
+}
+h3 {
+color: green;
+text-align: center;
+border-style: solid ;
+border-color: blue;
+background-color: wheat;
+height: 100px;
+padding: 20px;
+line-height: 100px;
+font-size: 30px;
+margin: 0;
+}
+#img1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+}
+#img2 {
+width: 100px;
+height: 100px;
+position: absolute;
+top: 25px;
+right: 25px;
+}
+.menu {
+background-color: lightblue;
+border: 2px solid rgb(0, 0, 0);
+font-weight: bold;
+}
+.menu ul {
+list-style: none;
+text-align: center;
+}
+.menu li {
+display: inline-block;
+margin: 0 30px;
+color: red;
+}
+h2 {
+text-align: center;
+font-size: 24px;
+}
+p {
+font-size: 20px;
+color: blueviolet;
+}
+.livros {
+text-align: center;
+}
+#imgb1 {
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+#imgb2 {
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+#imgb3 {
+    text-align: left;
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+iframe {
+height:250px;
+width: 250px;
+position: relative;
+left: 600px;
+margin: 20px;
+}
+table{
+margin: auto;
+border-collapse: collapse;
+}
+
+table th{
+text-align: center;
+border: 2px dashed red;
+color: red;
+padding: 5px;
+}
+
+table td{
+border: 2px dashed red;
+padding: 5px;
+}
+
+
+
+

@@ -1,3 +1,6 @@
+body {
+background-color: lightgray;
+}
 h3 {
 color: green;
 text-align: center;
@@ -39,6 +42,57 @@ display: inline-block;
 margin: 0 30px;
 color: red;
 }
+h2 {
+text-align: center;
+font-size: 24px;
+}
+p {
+font-size: 20px;
+color: blueviolet;
+}
+.livros {
+text-align: center;
+}
+#imgb1 {
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+#imgb2 {
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+#imgb3 {
+    text-align: left;
+height: 200px;
+width: 200px;
+margin: 20px;
+}
+iframe {
+height:250px;
+width: 250px;
+position: relative;
+left: 600px;
+margin: 20px;
+}
+table{
+margin: auto;
+border-collapse: collapse;
+}
+
+table th{
+text-align: center;
+border: 2px dashed red;
+color: red;
+padding: 5px;
+}
+
+table td{
+border: 2px dashed red;
+padding: 5px;
+}
+
 
 
 

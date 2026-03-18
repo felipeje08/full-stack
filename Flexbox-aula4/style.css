@@ -1,0 +1,30 @@
+.flexcontainer {
+    background-color: lightblue;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-content: space-between;
+}
+.flexcontainer div {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+
+}
+#div10 {
+order: 2;
+flex-grow: 2;
+}
+#div21 {
+order: 1;
+flex-grow: 1;
+}
+#div30 {
+flex-basis: 200px;
+}
+#div18 {
+align-self: flex-start
+}

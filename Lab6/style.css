@@ -1,0 +1,11 @@
+body {
+    background-color: #008cff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mycanvas{
+background-color: rgb(109, 109, 109);
+border: 2px solid black;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="Home.html">Voltar para Home</a>
+    </div>
+
+    <h1>Lista de Projetos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Projeto</th>
+                <th>Descrição</th>
+                <th>Link de Acesso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Meu Primeiro Site</td>
+                <td>Um site básico em HTML e CSS.</td>
+                <td><a href="#">Acessar Projeto</a></td>
+            </tr>
+            <tr>
+                <td>Servidor Node.js</td>
+                <td>Projeto de servidor WEB utilizando Express.</td>
+                <td><a href="http://192.168.0.57/Home.html">Ver no IP Local</a></td>
+            </tr>
+            </tbody>
+    </table>
+
+</body>
+</html>

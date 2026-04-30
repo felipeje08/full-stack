@@ -19,6 +19,7 @@ def buscar_filme():
     for i, g in enumerate(generos):
         print(f"{i+1} - {g}")
 
+    try:
         op = int(input("Escolha o gênero: "))
         genero_escolhido = generos[op-1]
 
@@ -29,12 +30,12 @@ def buscar_filme():
             print(f"{i+1} - {f[0]}")
 
         escolha = int(input("Escolha o filme: "))
-        if filme == lista_filmes[escolha-1]:
+        filme = lista_filmes[escolha-1]
 
         print("\n--- INFORMAÇÕES ---")
         print("Nome:", filme[0])
         print("Duração:", filme[1], "min")
         print("Ano:", filme[2])
 
-       elif:
-    print("Opção inválida!")
+    except:
+        print("Opção inválida!")

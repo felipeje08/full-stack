@@ -23,7 +23,7 @@ def cadastrar():
     email = input("Email: ")
     senha = input("Senha: ")
 
-    # 🚨 evita email repetido (ganha ponto)
+
     for u in usuarios:
         if u["email"] == email:
             print("Email já cadastrado!")

@@ -29,12 +29,12 @@ def buscar_filme():
             print(f"{i+1} - {f[0]}")
 
         escolha = int(input("Escolha o filme: "))
-        filme = lista_filmes[escolha-1]
+        if filme == lista_filmes[escolha-1]:
 
         print("\n--- INFORMAÇÕES ---")
         print("Nome:", filme[0])
         print("Duração:", filme[1], "min")
         print("Ano:", filme[2])
 
-    elif:
-print("Opção inválida!")
+       elif:
+    print("Opção inválida!")

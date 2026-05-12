@@ -1,4 +1,3 @@
-# Ação
 Vingadores;143;2012;Acao
 Mad Max: Estrada da Furia;120;2015;Acao
 John Wick;101;2014;Acao

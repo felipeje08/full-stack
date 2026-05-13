@@ -1,27 +1,66 @@
-def buscar_serie():
-    arquivo = open("series.txt", "r")
+def ler_series():
 
     series = []
 
+    arquivo = open("Fei.tv/series.txt", "r")
+
     for linha in arquivo:
-        if linha.strip() == "":
-            continue
-        series.append(linha.strip().split(";"))
+
+        linha = linha.strip()
+
+        if linha != "":
+
+            dados = linha.split(";")
+
+            serie = {
+                "nome": dados[0],
+                "temporadas": dados[1],
+                "episodios": dados[2],
+                "genero": dados[3]
+            }
+
+            series.append(serie)
 
     arquivo.close()
 
+    return series
+
+
+def listar_series():
+
+    series = ler_series()
+
     print("\n--- SÉRIES DISPONÍVEIS ---")
-    for i, s in enumerate(series):
-        print(f"{i+1} - {s[0]}")
 
-    try:
-        escolha = int(input("Escolha uma série: "))
-        serie = series[escolha - 1]
+    contador = 1
 
-        print("\n--- INFORMAÇÕES ---")
-        print("Nome:", serie[0])
-        print("Temporadas:", serie[1])
-        print("Episódios:", serie[2])
+    for serie in series:
 
-    except:
-        print("Opção inválida!")
+        print(contador, "-", serie["nome"])
+
+        contador = contador + 1
+
+
+def buscar_serie():
+
+    series = ler_series()
+
+    nome = input("Digite o nome da série: ")
+
+    encontrado = False
+
+    for serie in series:
+
+        if nome.lower() in serie["nome"].lower():
+
+            print("\n--- SÉRIE ---")
+            print("Nome:", serie["nome"])
+            print("Temporadas:", serie["temporadas"])
+            print("Episódios:", serie["episodios"])
+            print("Gênero:", serie["genero"])
+
+            encontrado = True
+
+    if encontrado == False:
+
+        print("Série não encontrada!")

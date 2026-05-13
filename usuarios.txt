@@ -1,3 +1,4 @@
 C:\Users\unicfsilva\.local\bin\python3.14.exe c:/Users/unicfsilva/phyton/full-stack/Fei.tv/projeto.py;f;f
 felipe;felipeje@gmail.com;jeferson
 felipe;j@;f
+felipe;felipe@;jj

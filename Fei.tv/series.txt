@@ -1,10 +1,10 @@
-Breaking Bad;5;62
-Stranger Things;4;34
-Game of Thrones;8;73
-The Office;9;201
-Friends;10;236
-The Witcher;3;24
-Dark;3;26
-The Walking Dead;11;177
-Peaky Blinders;6;36
-La Casa de Papel;5;41
+Breaking Bad;5;62;Drama
+Stranger Things;4;34;Ficcao
+Game of Thrones;8;73;Fantasia
+The Office;9;201;Comedia
+Friends;10;236;Comedia
+The Witcher;3;24;Fantasia
+Dark;3;26;Ficcao
+The Walking Dead;11;177;Terror
+Peaky Blinders;6;36;Drama
+La Casa de Papel;5;41;Acao

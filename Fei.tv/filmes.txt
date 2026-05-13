@@ -9,7 +9,7 @@ Missao Impossivel;110;1996;Acao
 Thor Ragnarok;130;2017;Acao
 Capitao America;124;2011;Acao
 
-# Romance
+
 Titanic;195;1997;Romance
 Diario de uma Paixao;123;2004;Romance
 Como Eu Era Antes de Voce;110;2016;Romance
@@ -21,7 +21,7 @@ PS Eu Te Amo;126;2007;Romance
 Um Dia;107;2011;Romance
 Antes do Amanhecer;101;1995;Romance
 
-# Terror
+
 Corra;104;2017;Terror
 Invocacao do Mal;112;2013;Terror
 It A Coisa;135;2017;Terror
@@ -33,7 +33,7 @@ Annabelle;99;2014;Terror
 Atividade Paranormal;86;2007;Terror
 O Iluminado;146;1980;Terror
 
-# Ficcao
+
 Interestelar;169;2014;Ficcao
 Matrix;136;1999;Ficcao
 Avatar;162;2009;Ficcao

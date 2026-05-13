@@ -1,41 +1,66 @@
-def buscar_filme():
-    arquivo = open("filmes.txt", "r")
+def ler_filmes():
+
     filmes = []
 
+    arquivo = open("Fei.tv/filmes.txt", "r")
+
     for linha in arquivo:
-        if linha.strip() == "" or linha.startswith("#"):
-            continue
-        filmes.append(linha.strip().split(";"))
+
+        linha = linha.strip()
+
+        if linha != "":
+
+            dados = linha.split(";")
+
+            filme = {
+                "nome": dados[0],
+                "duracao": dados[1],
+                "ano": dados[2],
+                "genero": dados[3]
+            }
+
+            filmes.append(filme)
 
     arquivo.close()
 
-    generos = []
+    return filmes
 
-    for f in filmes:
-        if f[3] not in generos:
-            generos.append(f[3])
 
-    print("\n--- GÊNEROS ---")
-    for i, g in enumerate(generos):
-        print(f"{i+1} - {g}")
+def listar_filmes():
 
-    try:
-        op = int(input("Escolha o gênero: "))
-        genero_escolhido = generos[op-1]
+    filmes = ler_filmes()
 
-        lista_filmes = [f for f in filmes if f[3] == genero_escolhido]
+    print("\n--- FILMES DISPONÍVEIS ---")
 
-        print(f"\n--- FILMES DE {genero_escolhido} ---")
-        for i, f in enumerate(lista_filmes):
-            print(f"{i+1} - {f[0]}")
+    contador = 1
 
-        escolha = int(input("Escolha o filme: "))
-        filme = lista_filmes[escolha-1]
+    for filme in filmes:
 
-        print("\n--- INFORMAÇÕES ---")
-        print("Nome:", filme[0])
-        print("Duração:", filme[1], "min")
-        print("Ano:", filme[2])
+        print(contador, "-", filme["nome"])
 
-    except:
-        print("Opção inválida!")
+        contador = contador + 1
+
+
+def buscar_filme():
+
+    filmes = ler_filmes()
+
+    nome = input("Digite o nome do filme: ")
+
+    encontrado = False
+
+    for filme in filmes:
+
+        if nome.lower() in filme["nome"].lower():
+
+            print("\n--- FILME ---")
+            print("Nome:", filme["nome"])
+            print("Duração:", filme["duracao"], "min")
+            print("Ano:", filme["ano"])
+            print("Gênero:", filme["genero"])
+
+            encontrado = True
+
+    if encontrado == False:
+
+        print("Filme não encontrado!")

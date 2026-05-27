@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cadastro de Filmes</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- H1 -->
+        <h1>
+            Cadastro de Filmes
+        </h1>
+
+
+        <!-- IFRAME -->
+        <div class="video">
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/EXeTwQWrcwY"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen
+            >
+            </iframe>
+
+        </div>
+
+
+        <!-- LISTA -->
+        <div class="lista">
+
+            <h2>
+                O que esse sistema faz?
+            </h2>
+
+            <ul>
+
+                <li>
+                    Cadastra filmes
+                </li>
+
+                <li>
+                    Salva no banco de dados
+                </li>
+
+                <li>
+                    Lista os filmes cadastrados
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <div class="formulario">
+
+            <h2>
+                Cadastrar Filme
+            </h2>
+
+            <form
+                action="/cadastrar_filme"
+                method="POST"
+            >
+
+                <label>
+                    Nome do Filme:
+                </label>
+
+                <input
+                    type="text"
+                    name="nome"
+                    required
+                >
+
+
+                <label>
+                    Categoria:
+                </label>
+
+                <input
+                    type="text"
+                    name="categoria"
+                    required
+                >
+
+
+                <label>
+                    Descrição:
+                </label>
+
+                <textarea
+                    name="descricao"
+                    rows="4"
+                    required
+                >
+                </textarea>
+
+
+                <button type="submit">
+
+                    Cadastrar
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- BLOCO EJS -->
+        <div class="filmes">
+
+            <h2>
+                Filmes cadastrados
+            </h2>
+
+            <% filmes.forEach(function(filme) { %>
+
+                <div class="card">
+
+                    <h3>
+
+                        <%= filme.db_nome %>
+
+                    </h3>
+
+                    <p>
+
+                        Categoria:
+                        <strong>
+
+                            <%= filme.db_categoria %>
+
+                        </strong>
+
+                    </p>
+
+                    <p>
+
+                        Descrição:
+                        <strong>
+
+                            <%= filme.db_descricao %>
+
+                        </strong>
+
+                    </p>
+
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

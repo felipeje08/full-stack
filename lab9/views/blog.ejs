@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <a class="botao" href="/cadastrar_post">
+        Cria Post
+    </a>
+
+    <br><br>
+
+    <% posts.forEach(function(post) { %>
+
+        <div class="post">
+
+            <h2>
+                <%= post.db_titulo %>
+            </h2>
+
+            <h3>
+                <%= post.db_resumo %>
+            </h3>
+
+            <p>
+                <%= post.db_conteudo %>
+            </p>
+
+        </div>
+
+    <% }) %>
+
+</body>
+</html>

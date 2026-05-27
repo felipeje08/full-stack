@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Carros Disponíveis</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <h1>Carros Disponíveis</h1>
+
+    <a class="botao" href="/gerenciar_carros">
+        Gerenciar Carros
+    </a>
+
+    <br><br>
+
+    <% carros.forEach(function(carro) { %>
+
+        <div class="post">
+
+            <h2>
+                <%= carro.db_marca %>
+                -
+                <%= carro.db_modelo %>
+            </h2>
+
+            <p>
+                Ano:
+                <strong>
+                    <%= carro.db_ano %>
+                </strong>
+            </p>
+
+            <p>
+                Quantidade:
+                <strong>
+                    <%= carro.db_qtde_disponivel %>
+                </strong>
+            </p>
+
+            <% if(carro.db_qtde_disponivel <= 0) { %>
+
+                <h3>
+                    ESGOTADO
+                </h3>
+
+            <% } else { %>
+
+                <a
+                    class="botao"
+                    href="/vender_carro/<%= carro._id %>"
+                >
+                    Vender
+                </a>
+
+            <% } %>
+
+        </div>
+
+    <% }) %>
+
+</body>
+</html>

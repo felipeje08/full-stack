@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Cadastro Produto</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cadastrar Produto</h1>
+
+        <form
+            action="/cadastrar_produto"
+            method="POST"
+        >
+
+            <label>Nome:</label>
+
+            <input
+                type="text"
+                name="nome"
+                required
+            >
+
+            <label>Preço:</label>
+
+            <input
+                type="number"
+                name="preco"
+                required
+            >
+
+            <label>Descrição:</label>
+
+            <input
+                type="text"
+                name="descricao"
+                required
+            >
+
+            <button type="submit">
+
+                Cadastrar Produto
+
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/listar_produtos">
+            Ver Produtos
+        </a>
+
+        <br><br>
+
+        <a href="/cadastro_usuario">
+            Ir para Usuários
+        </a>
+
+    </div>
+
+</body>
+</html>

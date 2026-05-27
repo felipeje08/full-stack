@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Usuários</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <h1>Usuários Cadastrados</h1>
+
+    <% usuarios.forEach(function(usuario) { %>
+
+        <div class="card">
+
+            <h2>
+
+                <%= usuario.nome %>
+
+            </h2>
+
+            <p>
+
+                Login:
+                <strong>
+
+                    <%= usuario.login %>
+
+                </strong>
+
+            </p>
+
+            <p>
+
+                Senha:
+                <strong>
+
+                    <%= usuario.senha %>
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    <% }) %>
+
+    <a href="/cadastro_usuario">
+        Voltar
+    </a>
+
+</body>
+</html>

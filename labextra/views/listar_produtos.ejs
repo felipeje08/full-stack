@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <h1>Produtos Cadastrados</h1>
+
+    <% produtos.forEach(function(produto) { %>
+
+        <div class="card">
+
+            <h2>
+
+                <%= produto.nome %>
+
+            </h2>
+
+            <p>
+
+                Preço:
+                <strong>
+
+                    R$
+                    <%= produto.preco %>
+
+                </strong>
+
+            </p>
+
+            <p>
+
+                Descrição:
+                <strong>
+
+                    <%= produto.descricao %>
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    <% }) %>
+
+    <a href="/cadastro_produto">
+        Voltar
+    </a>
+
+</body>
+</html>

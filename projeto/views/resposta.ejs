@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✏️ Mude o título se quiser -->
+  <title>Cadastrado com sucesso!</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ====================================================
+         1. TÍTULO (h1) — obrigatório na rubrica
+         ✏️ Mude o texto se quiser
+    ===================================================== -->
+    <h1>Cadastrado com sucesso!</h1>
+
+    <!-- ====================================================
+         BLOCOS EJS — obrigatório na rubrica
+         Exibe os dados que vieram do formulário
+         ✏️ Mude campo1, campo2, campo3 para os seus campos
+            (devem ser iguais ao que está no res.render do app.js)
+    ===================================================== -->
+    <div class="card-resposta">
+      <p><strong>Campo 1:</strong> <%= campo1 %></p>
+      <p><strong>Campo 2:</strong> <%= campo2 %></p>
+
+      <!-- Use if quando um campo pode estar vazio -->
+      <% if (campo3) { %>
+        <p><strong>Campo 3:</strong> <%= campo3 %></p>
+      <% } %>
+    </div>
+
+    <!-- ====================================================
+         2. BOTÃO DE VOLTAR — obrigatório na rubrica
+         NÃO precisa mudar nada aqui
+    ===================================================== -->
+    <a href="/" class="btn-voltar">← Voltar</a>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✏️ Mude o título da aba do navegador -->
+  <title>Minha Página</title>
+  <!-- CSS separado — NÃO mude esse link -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ====================================================
+         1. TÍTULO (h1) — obrigatório na rubrica
+         ✏️ Mude o texto
+    ===================================================== -->
+    <h1>Título da Página</h1>
+
+    <!-- ====================================================
+         2. IMAGEM ou IFRAME — obrigatório na rubrica
+         Deixe UM dos dois e apague o outro
+    ===================================================== -->
+
+    <!-- OPÇÃO A: Imagem -->
+    <!-- ✏️ Mude o src para o caminho da imagem ou URL -->
+    <img src="https://via.placeholder.com/600x250" alt="Imagem da página">
+
+    <!-- OPÇÃO B: Iframe (YouTube, Google Maps, etc) -->
+    <!-- ✏️ Mude o src para o link embed do YouTube/Maps -->
+    <!--
+    <iframe
+      src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+      width="600" height="315"
+      allowfullscreen>
+    </iframe>
+    -->
+
+    <!-- ====================================================
+         3. LISTA — obrigatório na rubrica
+         ✏️ Mude os itens da lista para algo relacionado ao tema
+    ===================================================== -->
+    <h2>Lista de itens</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <!-- ====================================================
+         4. FORMULÁRIO — obrigatório na rubrica
+         ✏️ Mude os campos (label + input) conforme o professor pedir
+         ⚠️ NÃO mude: action="/cadastrar" method="POST"
+         ⚠️ O atributo name="" deve ser igual ao que está no app.js (req.body)
+    ===================================================== -->
+    <h2>Cadastrar</h2>
+    <form action="/cadastrar" method="POST">
+
+      <!-- ✏️ Mude o label e o name para o seu campo -->
+      <label for="campo1">Campo 1:</label>
+      <input type="text" id="campo1" name="campo1" placeholder="Digite aqui" required>
+
+      <!-- ✏️ Mude o label e o name para o seu campo -->
+      <label for="campo2">Campo 2:</label>
+      <input type="text" id="campo2" name="campo2" placeholder="Digite aqui" required>
+
+      <!-- ✏️ Mude o label e o name para o seu campo -->
+      <!-- type="number" para campos numéricos -->
+      <label for="campo3">Campo 3 (número):</label>
+      <input type="number" id="campo3" name="campo3" placeholder="0">
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- ====================================================
+         5. BLOCO EJS — obrigatório na rubrica
+         Lista os registros do banco de dados
+         ✏️ Mude "itens" se mudar o nome no app.js
+         ✏️ Mude item.campo1, item.campo2 para os seus campos
+    ===================================================== -->
+    <h2>Registros cadastrados</h2>
+
+    <% if (itens.length === 0) { %>
+      <p>Nenhum registro ainda.</p>
+    <% } else { %>
+      <ul class="lista-registros">
+        <% itens.forEach(function(item) { %>
+          <li>
+            <strong><%= item.campo1 %></strong>
+            — <%= item.campo2 %>
+            — <%= item.campo3 %>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+  </div>
+</body>
+</html>

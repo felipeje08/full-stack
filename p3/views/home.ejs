@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lista de convidados</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- H1 -->
+        <h1>
+            <strong>Lista de convidados da FEI</strong>
+        </h1>
+
+
+        <!-- IMAGEM -->
+        <div class="imagem">
+
+            <img src="/convidados.png" alt="convidados">
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <div class="formulario">
+
+            <h2>Adicionar convidado:</h2>
+
+            <form action="/cadastrar" method="POST">
+
+                <label>Nome do convidado:</label>
+
+                <input
+                    type="text"
+                    name="nome"
+                    required
+                >
+
+                <label>Quantidade de acompanhantes:</label>
+
+                <input
+                    type="number"
+                    name="acompanhantes"
+                    min="0"
+                    required
+                >
+
+                <button type="submit">Incluir</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- BLOCO EJS — lista de convidados -->
+        <div class="cadastros">
+
+            <h2>Lista de convidados:</h2>
+
+            <br>
+
+            <% cadastrar.forEach(function(cadastro) { %>
+
+                <div class="card">
+
+                    <div class="lista">
+                        <ul>
+                            <li>
+                                <strong><%= cadastro.db_nome %></strong>
+                                — <%= cadastro.db_acompanhantes %> acompanhante(s)
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            <% }); %>
+
+            <!-- TOTAL — atualiza conforme a lista cresce -->
+            <div class="card total">
+
+                <p>
+                    Total de acompanhantes:
+                    <strong><%= total %></strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+# GUIA RÁPIDO — O QUE FAZER NA PROVA
+
+## 1. Copiar a pasta e instalar dependências
+Abra o terminal DENTRO da pasta do projeto e rode:
+  npm install
+
+## 2. Iniciar o MongoDB
+Certifique-se que o MongoDB está rodando na máquina.
+
+## 3. Rodar o servidor
+Abra o terminal como ADMINISTRADOR (porta 80 exige isso no Windows) e rode:
+  node app.js
+
+## 4. Acessar no navegador
+  http://localhost
+
+---
+
+## O QUE MUDAR CONFORME O PROFESSOR PEDIR
+
+### No app.js
+- Linha do mongoose.connect → mude "meubanco" para o nome que o professor quiser
+- Campos do Schema (campo1, campo2, campo3) → coloque os campos do formulário da prova
+- Nome do Model 'Item' → mude para o nome da entidade (ex: 'Aluno', 'Produto')
+- No req.body → os nomes devem bater com os name="" do formulário
+
+### No home.ejs
+- Texto do <h1>
+- Imagem ou iframe (escolha um, apague o outro)
+- Itens da <ul>
+- Labels e name="" dos inputs do formulário
+- item.campo1, item.campo2 na listagem EJS
+
+### No resposta.ejs
+- Texto do <h1>
+- campo1, campo2, campo3 dentro dos <%= %>
+
+### No style.css
+- Cores (background-color do body, cor do h1, cor dos botões)
+- Pouco mais que isso precisa mudar
+
+---
+
+## ESTRUTURA DO PROJETO
+projeto/
+├── app.js            ← servidor + rotas + banco
+├── package.json      ← dependências
+├── views/
+│   ├── home.ejs      ← página principal (formulário + lista)
+│   └── resposta.ejs  ← página de confirmação
+└── public/
+    └── style.css     ← estilos
